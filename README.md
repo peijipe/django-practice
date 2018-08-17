@@ -2,7 +2,8 @@ Django_sample_page
 ===============
 # Description
 
-pythonウェブフレームワークであるDjango(ver2.X)を利用して、被攻撃ウェブサーバーを構築する。
+pythonウェブフレームワークであるDjango(ver2.X)を利用して、ウェブサーバーを構築。
+ニュースサイト風を目指していた。
 
 # how to run
 
@@ -31,7 +32,7 @@ $ pip install mysqlclient
 
 ## set up
 
-DjangoのデフォルトデータベースはSQLiteであるが、ここではMySQLを利用。
+DjangoのデフォルトデータベースはSQLiteであるが、ここでは拡張性を考えMySQLを利用。
 
 データベースとユーザーの作成
 
