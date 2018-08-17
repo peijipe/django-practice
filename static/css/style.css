@@ -1,0 +1,122 @@
+.page-header {
+    background-color: rgb(0,32,99);
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.user-list {
+    color: #ffffff;
+    font-size: 12pt;
+    text-decoration: none;
+    float: right;
+    list-style-type: none;
+}
+
+
+
+.content-login {
+    margin: 150px 0 30px 0;
+    border: 1px solid #ced4da;
+    background-color: #F7F7F7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+.login-title {
+    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid #ced4da;
+}
+
+.hoge {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-place {
+    text-align: right;
+}
+
+
+
+body {
+padding-top:100px;
+}
+
+.starter-template {
+padding: 40px 15px;
+text-align: center;
+}
+
+.bgStyle {
+    background-color: #FFF;
+    padding: 60px 0;
+}
+
+.cont_news {
+    position: relative;
+}
+
+.cont_news::before {
+    background-color: #816a00;
+    content: ' ';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 12px;
+    width: 100%;
+    z-index: 0;
+}
+
+.heading {
+    background-color: #ffffff;
+    color: #000;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    z-index: 1;
+}
+
+.post-image {
+    position: relative;
+    width: 1px;
+    height: 164px;
+}

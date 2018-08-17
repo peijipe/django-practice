@@ -1,0 +1,13 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.pub_date %}
+            {{ post.pub_date }}
+        {% endif %}
+        <a class="btn btn-default" href="{% url 'news:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.body|linebreaks }}</p>
+        <img src="{{ post.image.url }}">
+    </div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <title>{% if request.path != '/' %}{% block title %}{% endblock %} | {% endif %}Blog App with Auth | Django2 Tutorial</title>
+</head>
+<body>
+
+    <header>
+    </header>
+
+    <div class="col-md-6 offset-md-3">
+    <div>
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+
+        {% if next %}
+            {% if user.is_authenticated %}
+            <p>Your account doesn't have access to this page. To proceed,
+            please login with an account that has access.</p>
+            {% else %}
+            <p>Please login to see this page.</p>
+            {% endif %}
+        {% endif %}
+
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    <div class="content-login">
+            <div class="hoge">
+                <h4 class="login-title">Please Login</h4>
+            </div>
+            <div class="form-signin mb10">
+                <div class="form-group">
+                    <label for="usr" class="col-sm-12 control-label">ユーザー名:</label>
+                    <div class="col-sm-12">
+                        <input type="text" name="username" class="form-control" id="usr">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pwd" class="col-sm-12 control-label">Password:</label>
+                    <div class="col-sm-12">
+                        <input type="password" name="password" class="form-control" id="pwd">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="btn-place">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <p><a href="{% url 'accounts:signup' %}" class="signup">Sign up</a></p>
+    {# Assumes you setup the password_reset view in your URLconf #}
+    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
